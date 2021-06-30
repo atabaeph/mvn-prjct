@@ -9,9 +9,9 @@ pipeline {
 		SERVER_CREDENTIALS = credentials('87eeb8b5-64ea-4d67-b561-11e8293b9c0c') //id of credential
 	}
 	
-	tools {
-		maven maven-3.8  //maven maven-name
-	}
+//	tools {
+//		maven maven-3.8  //maven maven-name
+//	}
 	
 	parameters {
 		string(name: 'VERSION', defaultValue: '', description: 'version to deploy on prod')
