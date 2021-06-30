@@ -30,7 +30,7 @@ pipeline {
 		stage("build") { //1
 			steps {
 				script {
-					gv.BuildApp()  //call function from script
+					gv.buildApp()  //call function from script
 				}
 				
 				echo "building app...........${params.VERSION}"
