@@ -14,7 +14,7 @@ pipeline {
 	}
 	
 	parameters {
-		string(name: 'VERSION', defaultValue '', description: 'version to deploy on prod')
+		string(name: 'VERSION', defaultValue: '', description: 'version to deploy on prod')
 		booleanParam(name: 'executeTests', defaultValue: true, description: '')
 	}
 	
