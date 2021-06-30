@@ -8,10 +8,7 @@ pipeline {
 		NEW_VERSION = '1.3.2'
 		SERVER_CREDENTIALS = credentials('87eeb8b5-64ea-4d67-b561-11e8293b9c0c') //id of credential
 	}
-	
-//	tools {
-//		maven maven-3.8  //maven maven-name
-//	}
+
 	
 	parameters {
 		string(name: 'VERSION', defaultValue: '', description: 'version to deploy on prod')
@@ -35,7 +32,6 @@ pipeline {
 				
 				echo "building app...........${params.VERSION}"
 				echo "${NEW_VERSION}..........."
-				sh "mvn install"
 			}
 		}
 		
@@ -62,15 +58,6 @@ pipeline {
 			}
 		}
 	}	
-//	post {	
-//		always {
-//			// always will do this step
-//		}
-//		
-//		success {
-//			// will do this step only after success
-//		}
-//	}
 		
 	
 }//pipeline end
