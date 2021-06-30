@@ -27,7 +27,7 @@ pipeline {
 			}
 		}
 		
-		stage("build") { #1
+		stage("build") { //1
 			steps {
 				script {
 					gv.BuildApp()  //call function from script
@@ -39,7 +39,7 @@ pipeline {
 			}
 		}
 		
-		stage("test") {#2			
+		stage("test") {//2			
 			when {
 				expression {
 					params.executeTests
@@ -53,7 +53,7 @@ pipeline {
 			}
 		}
 		
-		stage("deploy") { #3
+		stage("deploy") { //3
 			steps {
 				echo "deploy app............."
 				withCredentials([
