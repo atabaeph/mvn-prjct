@@ -5,7 +5,7 @@ pipeline {
 	
 	environment {
 		// variables
-		NEW_VERSION = '1.3.2'
+		//NEW_VERSION = '1.3.2'
 		SERVER_CREDENTIALS = credentials('87eeb8b5-64ea-4d67-b561-11e8293b9c0c') //id of credential
 	}
 
