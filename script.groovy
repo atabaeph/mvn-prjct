@@ -1,13 +1,13 @@
 def buildApp() {
-	echo 'building app...'
+	echo 'in buildApp() building app...'
 }
 
 def testApp() {
-	echo 'testing app....'
+	echo 'in testApp() testing app....'
 }
 
 def deployApp() {
-	echo 'deploying app....'
+	echo 'in deployApp() deploying app....'
 }
 
 return this
