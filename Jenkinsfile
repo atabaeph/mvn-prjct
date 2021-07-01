@@ -51,10 +51,10 @@ pipeline {
 		
 		stage("deploy") { //3
 			steps {
-				echo "deploy app............."
-				withCredentials([
-					usernamePassword(credentials: '87eeb8b5-64ea-4d67-b561-11e8293b9c0c', usernameVariable: DOCKER_ID, passwordVariable: PASSWORD)
-				])
+				echo "deploy app............."	
+				script {
+					gv.deployApp()  //call function from script
+				}				
 			}
 		}
 	}	
