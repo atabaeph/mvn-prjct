@@ -1,7 +1,7 @@
-FROM tomcat:latest
+FROM tomcat:9.0-alpine
 
-RUN ["rm", "-fr", "/usr/local/tomcat/webapps/webapp.war"]
+RUN ["rm", "-fr", "/usr/local/tomcat/webapps/ROOT"]
 
-ADD ./webapp/target/webapp.war /usr/local/tomcat/webapps/
+COPY ./webapp/target/webapp.war /usr/local/tomcat/webapps/ROOT.war
 
-CMD catalina.sh run
+CMD ["catalina.sh", "run"]
